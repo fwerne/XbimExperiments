@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <LanguageTargets>$(MSBuildToolsPath)\Microsoft.CSharp.targets</LanguageTargets>
+    <TargetFrameworks>net47</TargetFrameworks>
+    <Title>Xbim.Presentation</Title>
+    <Description>Xbim.WindowsUI is a library containing a set of Windows Forms and WPF controls that can be used to build Windows Xaml 
+    or forms-based applications, which can display the 3D geometry and semantic data in IFC building models.</Description>
+    <PackageId>Xbim.WindowsUI</PackageId>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net47|AnyCPU'">
+    <OutputPath>C:\Users\Flo\source\repos\XbimToolkit\StartProject\bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net47|AnyCPU'">
+    <OutputPath>..\Output\Release</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx" Generator="ResXFileCodeGenerator" LastGenOutput="Resources.Designer.cs" />
+    <Compile Update="Properties\Resources.Designer.cs" DesignTime="True" AutoGen="True" DependentUpon="Resources.resx" />
+    <Compile Update="Settings.Designer.cs" AutoGen="True" DependentUpon="Settings.settings" />
+    <None Update="Settings.settings" LastGenOutput="Settings.Designer.cs" Generator="SettingsSingleFileGenerator" />
+    <Page Include="**\*.xaml" SubType="Designer" Generator="MSBuild:Compile" Exclude="App.xaml" />
+    <Compile Update="**\*.xaml.cs" SubType="Designer" DependentUpon="%(Filename)" />
+    <Resource Include="assets\*.*" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="HelixToolkit.Wpf" Version="2015.1.715" />
+    <PackageReference Include="PropertyTools.Wpf" Version="2015.1.66" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="2.1.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System.Buffers">
+      <HintPath>..\StartProject\bin\Debug\net47\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Memory">
+      <HintPath>..\StartProject\bin\Debug\net47\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics.Vectors">
+      <HintPath>..\StartProject\bin\Debug\net47\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+      <HintPath>..\StartProject\bin\Debug\net47\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="Xbim.Common">
+      <HintPath>..\StartProject\bin\Debug\net47\Xbim.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Xbim.Geometry.Engine.Interop">
+      <HintPath>..\StartProject\bin\Debug\net47\Xbim.Geometry.Engine.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="Xbim.Ifc">
+      <HintPath>..\StartProject\bin\Debug\net47\Xbim.Ifc.dll</HintPath>
+    </Reference>
+    <Reference Include="Xbim.Ifc2x3">
+      <HintPath>..\StartProject\bin\Debug\net47\Xbim.Ifc2x3.dll</HintPath>
+    </Reference>
+    <Reference Include="Xbim.Ifc4">
+      <HintPath>..\StartProject\bin\Debug\net47\Xbim.Ifc4.dll</HintPath>
+    </Reference>
+    <Reference Include="Xbim.IO.Esent">
+      <HintPath>..\StartProject\bin\Debug\net47\Xbim.IO.Esent.dll</HintPath>
+    </Reference>
+    <Reference Include="Xbim.IO.MemoryModel">
+      <HintPath>..\StartProject\bin\Debug\net47\Xbim.IO.MemoryModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Xbim.ModelGeometry.Scene">
+      <HintPath>..\StartProject\bin\Debug\net47\Xbim.ModelGeometry.Scene.dll</HintPath>
+    </Reference>
+    <Reference Include="Xbim.Tessellator">
+      <HintPath>..\StartProject\bin\Debug\net47\Xbim.Tessellator.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net47</TargetFrameworks>
+    <Title>Xbim ModelGeometry Scene</Title>
+    <IsPackable>true</IsPackable>
+    <Description>Provides support for the Geometry Scene creation.</Description>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <EnableUnmanagedDebugging>true</EnableUnmanagedDebugging>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net47|AnyCPU'">
+    <OutputPath>C:\Users\Flo\source\repos\XbimToolkit\StartProject\bin\Debug\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Xbim.Geometry.Engine.Interop\Xbim.Geometry.Engine.Interop.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.Extensions.Logging">
+      <HintPath>..\StartProject\bin\Debug\net47\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions">
+      <HintPath>..\StartProject\bin\Debug\net47\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Xbim.Common">
+      <HintPath>..\StartProject\bin\Debug\net47\Xbim.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Xbim.Ifc">
+      <HintPath>..\StartProject\bin\Debug\net47\Xbim.Ifc.dll</HintPath>
+    </Reference>
+    <Reference Include="Xbim.Ifc2x3">
+      <HintPath>..\StartProject\bin\Debug\net47\Xbim.Ifc2x3.dll</HintPath>
+    </Reference>
+    <Reference Include="Xbim.Ifc4">
+      <HintPath>..\StartProject\bin\Debug\net47\Xbim.Ifc4.dll</HintPath>
+    </Reference>
+    <Reference Include="Xbim.Tessellator">
+      <HintPath>..\Xbim.Tessellator\bin\Debug\net47\Xbim.Tessellator.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
